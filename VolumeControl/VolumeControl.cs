@@ -57,5 +57,11 @@ using Timer = System.Timers.Timer;
                 Mute();
                 timer.Enabled = false;
             }
+
+            internal void Unmute()
+            {
+                VolDown();
+                VolUp();
+            }
         }
     }

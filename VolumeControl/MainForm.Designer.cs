@@ -34,6 +34,7 @@
             this.btnMuteWithDelay = new System.Windows.Forms.Button();
             this.txtDelaySeconds = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnUnmute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMuteToggle
@@ -73,11 +74,22 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "seconds";
             // 
+            // btnUnmute
+            // 
+            this.btnUnmute.Location = new System.Drawing.Point(139, 14);
+            this.btnUnmute.Name = "btnUnmute";
+            this.btnUnmute.Size = new System.Drawing.Size(121, 23);
+            this.btnUnmute.TabIndex = 4;
+            this.btnUnmute.Text = "Unmute";
+            this.btnUnmute.UseVisualStyleBackColor = true;
+            this.btnUnmute.Click += new System.EventHandler(this.btnUnmute_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 101);
+            this.Controls.Add(this.btnUnmute);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDelaySeconds);
             this.Controls.Add(this.btnMuteWithDelay);
@@ -97,6 +109,7 @@
         private System.Windows.Forms.Button btnMuteWithDelay;
         private System.Windows.Forms.TextBox txtDelaySeconds;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnUnmute;
     }
 }
 

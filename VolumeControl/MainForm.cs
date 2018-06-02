@@ -27,7 +27,23 @@ namespace VolumeControl
 
         private void button2_Click(object sender, EventArgs e)
         {
-            _muter.Mute(58000);
+
+
+            try
+            {
+                _muter.Mute(double.Parse(txtDelaySeconds.Text)*1000);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Delay not valid","GIGO",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+
+        }
+
+        private void btnUnmute_Click(object sender, EventArgs e)
+        {
+
+            _muter.Unmute();
         }
     }
 }
